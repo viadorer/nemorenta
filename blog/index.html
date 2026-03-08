@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog nemorenta.cz — Články o pronájmu nemovitostí, správě nájemníků a garantovaném nájmu.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Blog | nemorenta.cz">
+    <meta property="og:description" content="Články o pronájmu nemovitostí, správě nájemníků a garantovaném nájmu.">
+    <meta property="og:url" content="https://www.nemorenta.cz/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="nemorenta.cz">
+    <title>Blog | nemorenta.cz</title>
+    <link rel="canonical" href="https://www.nemorenta.cz/blog/">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nm-blue': '#2D5A87',
+                        'nm-blue-hover': '#1a3d61',
+                        'nm-dark': '#0f1d35',
+                        'nm-text': '#333333',
+                        'nm-text-light': '#666666',
+                        'nm-bg': '#ffffff',
+                        'nm-bg-section': '#f8f9fa',
+                        'nm-border': '#e5e7eb',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "headline": "Blog nemorenta.cz",
+      "description": "Články o pronájmu nemovitostí, správě nájemníků a garantovaném nájmu.",
+      "url": "https://www.nemorenta.cz/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "nemorenta.cz"
+      }
+    }
+    </script>
+</head>
+<body class="bg-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="text-2xl font-black tracking-tight text-nm-dark">
+                    nemorenta<span class="text-nm-blue">.cz</span>
+                </a>
+                <div class="flex items-center space-x-6">
+                    <span class="text-sm font-semibold text-nm-blue">Blog</span>
+                    <a href="../index.html#kontakt" class="px-5 py-2 bg-nm-blue text-white text-sm font-semibold rounded-lg hover:bg-nm-blue-hover transition-all">
+                        Chci garantovaný nájem
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="pt-32 pb-16 bg-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+            <p class="text-sm font-bold text-nm-blue uppercase tracking-[0.15em] mb-6">Blog</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-nm-dark leading-tight tracking-tight">Pronájem bez starostí a garantovaný nájem</h1>
+            <p class="text-lg text-nm-text-light leading-relaxed mt-6 max-w-2xl mx-auto">Sdílíme zkušenosti z pronájmu, tipy pro majitele nemovitostí a praktické rady pro bezproblémový nájem.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="bg-nm-bg-section border-y border-nm-border">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 py-6">
+            <div id="category-filter" class="flex gap-3 flex-wrap justify-center"></div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-16 bg-nm-bg-section">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+
+            <!-- Loading -->
+            <div id="loading" class="text-center py-20">
+                <div class="inline-block w-8 h-8 border-4 border-gray-200 border-t-nm-blue rounded-full animate-spin"></div>
+                <p class="text-nm-text-light text-sm mt-4">Načítání článků...</p>
+            </div>
+
+            <!-- Error -->
+            <div id="error" class="hidden text-center py-20">
+                <p class="text-nm-blue font-semibold">Nepodařilo se načíst články. Zkuste to později.</p>
+            </div>
+
+            <!-- Grid -->
+            <div id="posts-container" class="relative min-h-[400px]">
+                <div id="blog-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500"></div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination-container" class="hidden flex justify-center items-center mt-16 gap-3 flex-wrap">
+                <button id="prev-page" onclick="changePage(-1)" class="px-5 py-3 border-2 border-nm-blue text-nm-blue font-semibold text-sm rounded-lg hover:bg-nm-blue hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                    &larr; Předchozí
+                </button>
+                <div id="page-numbers" class="flex gap-2 items-center"></div>
+                <button id="next-page" onclick="changePage(1)" class="px-5 py-3 border-2 border-nm-blue text-nm-blue font-semibold text-sm rounded-lg hover:bg-nm-blue hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                    Další &rarr;
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-nm-dark">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 py-14">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <a href="../index.html" class="text-lg font-black text-white tracking-tight">
+                        nemorenta<span class="text-nm-blue">.cz</span>
+                    </a>
+                    <p class="text-xs text-white/30 mt-2">Pronájem bez starostí</p>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="../index.html#jak-to-funguje" class="text-xs text-white/30 hover:text-white/60 transition-colors">Jak to funguje</a>
+                    <a href="../index.html#kalkulacka" class="text-xs text-white/30 hover:text-white/60 transition-colors">Kalkulačka</a>
+                    <a href="../index.html#faq" class="text-xs text-white/30 hover:text-white/60 transition-colors">FAQ</a>
+                    <a href="../index.html#kontakt" class="text-xs text-white/30 hover:text-white/60 transition-colors">Kontakt</a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-white/10">
+                <p class="text-xs text-white/15">&copy; 2025-2026 nemorenta.cz — Všechna práva vyhrazena</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let originalPosts = [];
+        let allPosts = [];
+        let currentPage = 1;
+        const postsPerPage = 9;
+        let isAnimating = false;
+        let selectedCategory = 'all';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBlogPosts();
+            initCategoryFilter();
+        });
+
+        async function loadBlogPosts() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const blogGrid = document.getElementById('blog-grid');
+
+            try {
+                const response = await fetch('./posts.json');
+                if (!response.ok) throw new Error('Nepodařilo se načíst data');
+
+                const data = await response.json();
+                const sortedPosts = (data.posts || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+                displayBlogPosts(sortedPosts);
+
+                loading.style.display = 'none';
+                blogGrid.classList.remove('hidden');
+                blogGrid.style.display = 'grid';
+            } catch (err) {
+                console.error('Chyba při načítání blog postů:', err);
+                loading.style.display = 'none';
+                error.classList.remove('hidden');
+            }
+        }
+
+        function displayBlogPosts(posts) {
+            originalPosts = posts;
+            applyFilterAndRender();
+        }
+
+        function initCategoryFilter() {
+            const container = document.getElementById('category-filter');
+            if (!container) return;
+            const categories = [
+                { key: 'all', label: 'Vše' },
+                { key: 'market', label: 'Trh & Finance' },
+                { key: 'tips', label: 'Tipy' },
+                { key: 'investment', label: 'Investice' },
+                { key: 'legal', label: 'Právní záležitosti' },
+                { key: 'renovation', label: 'Renovace' },
+            ];
+            container.innerHTML = '';
+            categories.forEach(function(cat) {
+                var btn = document.createElement('button');
+                btn.textContent = cat.label;
+                btn.setAttribute('data-cat', cat.key);
+                btn.className = 'px-4 py-2 border-2 border-nm-blue text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer';
+                btn.onclick = function() { setCategory(cat.key); };
+                container.appendChild(btn);
+            });
+            updateFilterActiveStyles();
+        }
+
+        function setCategory(cat) {
+            if (selectedCategory === cat) return;
+            selectedCategory = cat;
+            applyFilterAndRender();
+        }
+
+        function updateFilterActiveStyles() {
+            var container = document.getElementById('category-filter');
+            if (!container) return;
+            var buttons = Array.from(container.querySelectorAll('button[data-cat]'));
+            buttons.forEach(function(btn) {
+                var cat = btn.getAttribute('data-cat');
+                var active = (cat === selectedCategory);
+                if (active) {
+                    btn.style.background = '#2D5A87';
+                    btn.style.color = '#fff';
+                    btn.style.borderColor = '#2D5A87';
+                } else {
+                    btn.style.background = 'transparent';
+                    btn.style.color = '#2D5A87';
+                    btn.style.borderColor = '#2D5A87';
+                }
+            });
+        }
+
+        function applyFilterAndRender() {
+            var filtered = selectedCategory === 'all' ? originalPosts : originalPosts.filter(function(p) { return p.category === selectedCategory; });
+            allPosts = filtered;
+            currentPage = 1;
+            updatePostsView();
+            updatePagination();
+            updateFilterActiveStyles();
+        }
+
+        function updatePostsView() {
+            if (isAnimating) return;
+
+            var blogGrid = document.getElementById('blog-grid');
+            var paginationContainer = document.getElementById('pagination-container');
+
+            var startIndex = (currentPage - 1) * postsPerPage;
+            var endIndex = startIndex + postsPerPage;
+            var currentPosts = allPosts.slice(startIndex, endIndex);
+
+            isAnimating = true;
+            blogGrid.style.opacity = '0';
+
+            setTimeout(function() {
+                blogGrid.innerHTML = '';
+                currentPosts.forEach(function(post) {
+                    blogGrid.appendChild(createBlogCard(post));
+                });
+
+                setTimeout(function() {
+                    blogGrid.style.opacity = '1';
+                    isAnimating = false;
+                }, 50);
+            }, 250);
+
+            blogGrid.style.display = 'grid';
+            paginationContainer.style.display = allPosts.length > postsPerPage ? 'flex' : 'none';
+            paginationContainer.classList.remove('hidden');
+        }
+
+        function createBlogCard(post) {
+            var card = document.createElement('a');
+            card.href = './detail.html?id=' + post.id;
+            card.className = 'group bg-white rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300';
+
+            card.innerHTML =
+                '<div class="relative h-48 overflow-hidden">' +
+                    '<img src="' + post.image + '" alt="' + (post.imageAlt || '') + '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src=\'../hero.png\'">' +
+                    '<span class="absolute top-3 left-3 bg-nm-blue text-white text-xs font-semibold px-3 py-1 rounded">' + post.categoryName + '</span>' +
+                '</div>' +
+                '<div class="p-5">' +
+                    '<p class="text-xs text-nm-text-light mb-2">' + post.dateFormatted + ' · ' + post.readTime + ' min čtení</p>' +
+                    '<h3 class="text-base font-bold text-nm-dark leading-snug mb-2 group-hover:text-nm-blue transition-colors">' + post.title + '</h3>' +
+                    '<p class="text-sm text-nm-text-light leading-relaxed line-clamp-3">' + post.excerpt + '</p>' +
+                '</div>';
+
+            return card;
+        }
+
+        function changePage(direction) {
+            if (isAnimating) return;
+            var totalPages = Math.ceil(allPosts.length / postsPerPage);
+            var newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                updatePostsView();
+                updatePagination();
+                document.getElementById('posts-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function goToPage(page) {
+            if (isAnimating) return;
+            var totalPages = Math.ceil(allPosts.length / postsPerPage);
+            if (page >= 1 && page <= totalPages && page !== currentPage) {
+                currentPage = page;
+                updatePostsView();
+                updatePagination();
+                document.getElementById('posts-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function updatePagination() {
+            var totalPages = Math.ceil(allPosts.length / postsPerPage);
+            var prevBtn = document.getElementById('prev-page');
+            var nextBtn = document.getElementById('next-page');
+            var pageNumbers = document.getElementById('page-numbers');
+
+            prevBtn.disabled = currentPage <= 1;
+            nextBtn.disabled = currentPage >= totalPages;
+
+            pageNumbers.innerHTML = '';
+            if (totalPages <= 1) return;
+
+            for (var i = 1; i <= totalPages; i++) {
+                addPageButton(i);
+            }
+        }
+
+        function addPageButton(page) {
+            var button = document.createElement('button');
+            button.textContent = page;
+            button.onclick = function() { goToPage(page); };
+            var isActive = page === currentPage;
+            button.className = 'w-10 h-10 text-sm font-semibold rounded-lg transition-all duration-200 ' +
+                (isActive ? 'bg-nm-blue text-white' : 'border-2 border-gray-200 text-nm-blue hover:bg-nm-blue hover:text-white');
+            document.getElementById('page-numbers').appendChild(button);
+        }
+    </script>
+</body>
+</html>

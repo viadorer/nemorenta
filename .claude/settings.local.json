@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:vzornynajemce.cz)",
+      "mcp__hugo-orchestrator__get_project_media",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
