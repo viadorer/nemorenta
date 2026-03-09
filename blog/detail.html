@@ -7,182 +7,212 @@
     <meta name="description" content="Článek z blogu nemorenta.cz">
     <meta name="robots" content="index, follow">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'nm-blue': '#2D5A87',
-                        'nm-blue-hover': '#1a3d61',
-                        'nm-dark': '#0f1d35',
-                        'nm-text': '#333333',
-                        'nm-text-light': '#666666',
-                        'nm-bg': '#ffffff',
-                        'nm-bg-section': '#f8f9fa',
-                        'nm-border': '#e5e7eb',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        .prose { color: #333333; max-width: none; }
-        .prose p { margin-top: 1.25em; margin-bottom: 1.25em; line-height: 1.75; }
-        .prose h1 { color: #0f1d35; font-weight: 800; font-size: 2.25em; margin-top: 0; margin-bottom: 0.8em; line-height: 1.1; }
-        .prose h2 { color: #0f1d35; font-weight: 700; font-size: 1.5em; margin-top: 2em; margin-bottom: 1em; line-height: 1.33; border-left: 4px solid #2D5A87; padding-left: 1rem; }
-        .prose h3 { color: #0f1d35; font-weight: 600; font-size: 1.25em; margin-top: 1.6em; margin-bottom: 0.6em; line-height: 1.6; }
-        .prose h4 { color: #0f1d35; font-weight: 600; margin-top: 1.5em; margin-bottom: 0.5em; line-height: 1.5; }
-        .prose strong { color: #0f1d35; font-weight: 600; }
-        .prose a { color: #2D5A87; text-decoration: underline; font-weight: 500; }
-        .prose a:hover { color: #1a3d61; }
-        .prose blockquote { font-weight: 500; font-style: italic; color: #0f1d35; border-left: 0.25rem solid #2D5A87; margin-top: 1.6em; margin-bottom: 1.6em; padding-left: 1em; }
-        .prose ul { margin-top: 1.25em; margin-bottom: 1.25em; padding-left: 1.625em; }
-        .prose ol { margin-top: 1.25em; margin-bottom: 1.25em; padding-left: 1.625em; }
-        .prose li { margin-top: 0.5em; margin-bottom: 0.5em; }
-        .prose ul > li::marker { color: #2D5A87; }
-        .prose ol > li::marker { color: #2D5A87; }
-        .prose img { margin-top: 2em; margin-bottom: 2em; border-radius: 0.5rem; }
-        .prose code { color: #0f1d35; font-weight: 600; font-size: 0.875em; background-color: #f3f4f6; padding: 0.125rem 0.25rem; border-radius: 0.25rem; }
-        .prose pre { color: #e5e7eb; background-color: #0f1d35; overflow-x: auto; font-size: 0.875em; line-height: 1.7; margin-top: 1.7em; margin-bottom: 1.7em; border-radius: 0.375rem; padding: 0.85em 1.15em; }
-        .prose pre code { background-color: transparent; border-width: 0; padding: 0; font-weight: 400; color: inherit; }
-        .prose table { width: 100%; table-layout: auto; text-align: left; margin-top: 2em; margin-bottom: 2em; font-size: 0.875em; }
-        .prose thead { border-bottom: 1px solid #d1d5db; }
-        .prose thead th { color: #0f1d35; font-weight: 600; vertical-align: bottom; padding: 0 0.57em 0.57em; }
-        .prose tbody td { vertical-align: baseline; padding: 0.57em; }
-        .prose .lead { color: #666666; font-size: 1.25em; line-height: 1.6; margin-top: 1.2em; margin-bottom: 1.2em; }
+      :root {
+        --white: #ffffff;
+        --bg: #f8f7f5;
+        --bg2: #f2f1ee;
+        --border: #e4e2dd;
+        --border2: #d0cec8;
+        --text: #1a1916;
+        --muted: #706d65;
+        --subtle: #a09d96;
+        --accent: #2a5c3f;
+        --accent2: #3a7a55;
+        --accent-light: #edf4f0;
+        --accent-border: #b8d9c6;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+      nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 60px; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; background: rgba(248,247,245,0.94); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+      .logo { font-family: 'Instrument Serif', serif; font-size: 1.25rem; color: var(--text); text-decoration: none; }
+      .logo span { color: var(--accent); }
+      nav ul { display: flex; gap: 32px; list-style: none; align-items: center; }
+      nav ul a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 450; transition: color 0.15s; }
+      nav ul a:hover { color: var(--text); }
+      .nav-cta { background: var(--accent) !important; color: white !important; padding: 8px 20px; border-radius: 6px; font-weight: 500 !important; }
+      .nav-cta:hover { background: var(--accent2) !important; }
+
+      .btn { background: var(--accent); color: white; padding: 13px 26px; border-radius: 6px; font-weight: 500; font-size: 0.9rem; text-decoration: none; border: none; cursor: pointer; transition: background 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+      .btn:hover { background: var(--accent2); }
+
+      .article-wrap { max-width: 800px; margin: 0 auto; padding: 120px 80px 80px; }
+      .back-link { display: inline-flex; align-items: center; color: var(--muted); text-decoration: none; font-size: 0.875rem; margin-bottom: 32px; transition: color 0.15s; }
+      .back-link:hover { color: var(--accent); }
+      .article-category { display: inline-block; background: var(--accent); color: white; font-size: 0.7rem; font-weight: 600; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+      .article-title { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; color: var(--text); margin-bottom: 24px; }
+      .article-meta { display: flex; gap: 12px; font-size: 0.875rem; color: var(--subtle); margin-bottom: 40px; }
+      .article-image { width: 100%; border-radius: 10px; margin-bottom: 48px; }
+
+      .prose { color: var(--text); max-width: none; }
+      .prose p { margin: 1.25em 0; line-height: 1.75; }
+      .prose h2 { font-family: 'Instrument Serif', serif; font-size: 1.75rem; font-weight: 400; color: var(--text); margin-top: 2em; margin-bottom: 1em; line-height: 1.2; letter-spacing: -0.02em; border-left: 4px solid var(--accent); padding-left: 1rem; }
+      .prose h3 { font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; color: var(--text); margin-top: 1.6em; margin-bottom: 0.6em; line-height: 1.3; letter-spacing: -0.01em; }
+      .prose h4 { font-weight: 600; color: var(--text); margin-top: 1.5em; margin-bottom: 0.5em; }
+      .prose strong { color: var(--text); font-weight: 600; }
+      .prose a { color: var(--accent); text-decoration: underline; font-weight: 500; }
+      .prose a:hover { color: var(--accent2); }
+      .prose blockquote { font-weight: 500; font-style: italic; color: var(--text); border-left: 4px solid var(--accent); margin: 1.6em 0; padding-left: 1em; background: var(--bg2); padding: 1em 1em 1em 1.5em; border-radius: 4px; }
+      .prose ul, .prose ol { margin: 1.25em 0; padding-left: 1.625em; }
+      .prose li { margin: 0.5em 0; }
+      .prose ul > li::marker { color: var(--accent); }
+      .prose ol > li::marker { color: var(--accent); }
+      .prose img { margin: 2em 0; border-radius: 8px; }
+      .prose code { color: var(--text); font-weight: 600; font-size: 0.875em; background: var(--bg2); padding: 2px 6px; border-radius: 4px; }
+      .prose pre { color: var(--bg); background: var(--text); overflow-x: auto; font-size: 0.875em; line-height: 1.7; margin: 1.7em 0; border-radius: 6px; padding: 1em 1.25em; }
+      .prose pre code { background: transparent; padding: 0; font-weight: 400; color: inherit; }
+      .prose table { width: 100%; margin: 2em 0; font-size: 0.875em; border-collapse: collapse; }
+      .prose thead { border-bottom: 2px solid var(--border); }
+      .prose thead th { color: var(--text); font-weight: 600; padding: 0.75em; text-align: left; }
+      .prose tbody td { padding: 0.75em; border-bottom: 1px solid var(--border); }
+
+      .share-section { text-align: center; margin: 64px 0; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .share-section h3 { font-family: 'Instrument Serif', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 20px; }
+      .share-buttons { display: flex; justify-content: center; gap: 12px; }
+      .share-btn { width: 48px; height: 48px; background: var(--text); color: white; border-radius: 50%; border: none; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+      .share-btn:hover { background: var(--accent); transform: scale(1.05); }
+      .share-btn.copy { background: var(--accent); }
+      .share-btn.copy:hover { background: var(--accent2); }
+
+      .cta-box { background: var(--text); border-radius: 10px; padding: 48px; text-align: center; margin: 64px 0; }
+      .cta-box h3 { font-family: 'Instrument Serif', serif; font-size: 1.75rem; font-weight: 400; color: white; margin-bottom: 16px; }
+      .cta-box p { color: var(--subtle); margin-bottom: 24px; }
+      .cta-box .btn { background: var(--accent); }
+
+      .related-section { padding: 80px 0; background: var(--bg); border-top: 1px solid var(--border); }
+      .related-section .wrap { max-width: 1280px; margin: 0 auto; padding: 0 80px; }
+      .related-section h2 { font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400; text-align: center; margin-bottom: 48px; }
+      .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; text-decoration: none; display: block; transition: all 0.2s; }
+      .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); border-color: var(--accent-border); }
+      .related-card-image { width: 100%; height: 160px; object-fit: cover; background: linear-gradient(135deg, #e8e5df 0%, #d4d0c8 100%); }
+      .related-card-content { padding: 20px; }
+      .related-card-meta { font-size: 0.75rem; color: var(--subtle); margin-bottom: 8px; }
+      .related-card-title { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+      .related-card:hover .related-card-title { color: var(--accent); }
+
+      .loading, .error { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 60px; text-align: center; }
+      .spinner { display: inline-block; width: 40px; height: 40px; border: 4px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      footer { background: var(--text); color: var(--white); }
+      footer .wrap { max-width: 1280px; margin: 0 auto; padding: 56px 80px; }
+      footer .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px; }
+      footer .logo { color: var(--white); }
+      footer .logo span { color: var(--accent-light); }
+      footer p { font-size: 0.75rem; color: var(--subtle); margin-top: 8px; }
+      footer a { color: var(--subtle); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
+      footer a:hover { color: var(--white); }
+      footer nav { display: flex; gap: 32px; }
+      .footer-bottom { text-align: center; margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); }
+      .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin: 0; }
+
+      @media (max-width: 960px) {
+        nav { padding: 0 32px; }
+        nav ul { display: none; }
+        .article-wrap, .related-section .wrap, footer .wrap { padding-left: 32px; padding-right: 32px; }
+        .related-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      }
+      @media (max-width: 640px) {
+        .related-grid { grid-template-columns: 1fr; }
+        footer nav { flex-direction: column; gap: 16px; text-align: center; }
+        footer .footer-inner { flex-direction: column; text-align: center; }
+      }
     </style>
 </head>
-<body class="bg-white font-sans antialiased" id="app">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="text-2xl font-black tracking-tight text-nm-dark">
-                    nemorenta<span class="text-nm-blue">.cz</span>
-                </a>
-                <div class="flex items-center space-x-6">
-                    <a href="./index.html" class="text-sm font-semibold text-nm-blue hover:text-nm-blue-hover transition-colors">Blog</a>
-                    <a href="../index.html#kontakt" class="px-5 py-2 bg-nm-blue text-white text-sm font-semibold rounded-lg hover:bg-nm-blue-hover transition-all">
-                        Chci garantovaný nájem
-                    </a>
-                </div>
-            </div>
-        </div>
+    <nav>
+        <a href="../index.html" class="logo">nemo<span>renta</span>.cz</a>
+        <ul>
+            <li><a href="../index.html#jak-to-funguje">Jak to funguje</a></li>
+            <li><a href="../index.html#varianty">Varianty</a></li>
+            <li><a href="../index.html#kalkulator">Kolik dostanu</a></li>
+            <li><a href="../index.html#faq">Otázky</a></li>
+            <li><a href="./index.html" style="color: var(--accent); font-weight: 500;">Blog</a></li>
+            <li><a href="../index.html#formular" class="nav-cta">Chci nabídku</a></li>
+        </ul>
     </nav>
 
-    <!-- Loading State -->
-    <div id="loading-state" class="min-h-screen flex items-center justify-center pt-24">
-        <div class="text-center">
-            <div class="inline-block w-10 h-10 border-4 border-gray-200 border-t-nm-blue rounded-full animate-spin"></div>
-            <p class="text-nm-text-light text-sm mt-4">Načítám článek...</p>
+    <div id="loading-state" class="loading">
+        <div>
+            <div class="spinner"></div>
+            <p style="margin-top: 16px; color: var(--muted);">Načítám článek...</p>
         </div>
     </div>
 
-    <!-- Error State -->
-    <div id="error-state" class="hidden min-h-screen flex items-center justify-center pt-24">
-        <div class="text-center max-w-md mx-auto px-6">
-            <h1 class="text-3xl font-bold text-nm-dark mb-4">Článek nenalezen</h1>
-            <p id="error-message" class="text-nm-text-light mb-8"></p>
-            <a href="./index.html" class="inline-block px-8 py-3 bg-nm-blue text-white font-semibold text-sm rounded-lg hover:bg-nm-blue-hover transition-colors">
-                ← Zpět na blog
-            </a>
+    <div id="error-state" class="error" style="display: none;">
+        <div style="max-width: 500px; padding: 0 32px;">
+            <h1 style="font-family: 'Instrument Serif', serif; font-size: 2rem; margin-bottom: 16px;">Článek nenalezen</h1>
+            <p id="error-message" style="color: var(--muted); margin-bottom: 32px;"></p>
+            <a href="./index.html" class="btn">← Zpět na blog</a>
         </div>
     </div>
 
-    <!-- Article -->
-    <article id="article-state" class="hidden">
-        <div class="max-w-3xl mx-auto px-6 lg:px-8 pt-32 pb-16">
-
-            <!-- Back -->
-            <div class="mb-8">
-                <a href="./index.html" class="inline-flex items-center text-sm font-medium text-nm-text-light hover:text-nm-blue transition-colors">
-                    ← Zpět na blog
-                </a>
-            </div>
-
-            <!-- Category -->
-            <div class="mb-4">
-                <span id="post-category" class="inline-block px-3 py-1 text-xs font-semibold bg-nm-blue text-white rounded"></span>
-            </div>
-
-            <!-- Title -->
-            <h1 id="post-title" class="text-3xl lg:text-4xl font-extrabold text-nm-dark mb-6 leading-tight"></h1>
-
-            <!-- Meta -->
-            <div class="flex items-center text-nm-text-light text-sm mb-10">
+    <article id="article-state" style="display: none;">
+        <div class="article-wrap">
+            <a href="./index.html" class="back-link">← Zpět na blog</a>
+            <span id="post-category" class="article-category"></span>
+            <h1 id="post-title" class="article-title"></h1>
+            <div class="article-meta">
                 <span id="post-date"></span>
-                <span class="mx-2">·</span>
+                <span>·</span>
                 <span id="post-readtime"></span>
             </div>
-
-            <!-- Featured Image -->
-            <div id="post-image-wrap" class="mb-12 rounded-lg overflow-hidden">
-                <img id="post-image" src="" alt="" class="w-full h-auto">
+            <div id="post-image-wrap">
+                <img id="post-image" src="" alt="" class="article-image">
             </div>
+            <div id="post-content" class="prose"></div>
 
-            <!-- Content -->
-            <div id="post-content" class="prose prose-lg max-w-none mb-16"></div>
-
-            <!-- Share -->
-            <div class="text-center mb-16">
-                <h3 class="text-xl font-bold text-nm-dark mb-4">Sdílejte tento článek</h3>
-                <div class="flex justify-center gap-4">
-                    <button onclick="shareArticle('facebook')" class="w-12 h-12 bg-nm-dark text-white rounded-full hover:bg-nm-text transition-colors flex items-center justify-center text-lg" title="Facebook">f</button>
-                    <button onclick="shareArticle('twitter')" class="w-12 h-12 bg-nm-dark text-white rounded-full hover:bg-nm-text transition-colors flex items-center justify-center text-lg" title="Twitter">𝕏</button>
-                    <button onclick="shareArticle('linkedin')" class="w-12 h-12 bg-nm-dark text-white rounded-full hover:bg-nm-text transition-colors flex items-center justify-center text-lg" title="LinkedIn">in</button>
-                    <button onclick="copyUrl()" id="copy-btn" class="w-12 h-12 bg-nm-blue text-white rounded-full hover:bg-nm-blue-hover transition-colors flex items-center justify-center" title="Kopírovat odkaz">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            <div class="share-section">
+                <h3>Sdílejte tento článek</h3>
+                <div class="share-buttons">
+                    <button onclick="shareArticle('facebook')" class="share-btn" title="Facebook">f</button>
+                    <button onclick="shareArticle('twitter')" class="share-btn" title="Twitter">𝕏</button>
+                    <button onclick="shareArticle('linkedin')" class="share-btn" title="LinkedIn">in</button>
+                    <button onclick="copyUrl()" id="copy-btn" class="share-btn copy" title="Kopírovat odkaz">
+                        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- CTA -->
-            <div class="bg-nm-dark rounded-lg p-10 text-center">
-                <h3 class="text-2xl font-bold text-white mb-4">Chcete garantovaný nájem?</h3>
-                <p class="text-white/60 mb-6">Předejte nám svou nemovitost do správy a získejte pravidelný příjem každý měsíc.</p>
-                <a href="../index.html#kontakt" class="inline-block px-8 py-4 bg-nm-blue hover:bg-nm-blue-hover text-white font-semibold text-sm rounded-lg transition-colors">
-                    Chci garantovaný nájem
-                </a>
+            <div class="cta-box">
+                <h3>Chcete garantovaný nájem?</h3>
+                <p>Předejte nám svou nemovitost do správy a získejte pravidelný příjem každý měsíc.</p>
+                <a href="../index.html#formular" class="btn">Chci garantovaný nájem</a>
             </div>
         </div>
 
-        <!-- Related Posts -->
-        <section id="related-section" class="hidden py-16 bg-nm-bg-section border-t border-nm-border">
-            <div class="max-w-5xl mx-auto px-6 lg:px-8">
-                <h2 class="text-2xl font-bold text-nm-dark mb-10 text-center">Podobné články</h2>
-                <div id="related-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+        <section id="related-section" class="related-section" style="display: none;">
+            <div class="wrap">
+                <h2>Podobné články</h2>
+                <div id="related-grid" class="related-grid"></div>
             </div>
         </section>
     </article>
 
-    <!-- Footer -->
-    <footer class="bg-nm-dark">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8 py-14">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-                <div class="text-center md:text-left">
-                    <a href="../index.html" class="text-lg font-black text-white tracking-tight">
-                        nemorenta<span class="text-nm-blue">.cz</span>
-                    </a>
-                    <p class="text-xs text-white/30 mt-2">Pronájem bez starostí</p>
+    <footer>
+        <div class="wrap">
+            <div class="footer-inner">
+                <div>
+                    <a href="../index.html" class="logo">nemo<span>renta</span>.cz</a>
+                    <p>Pronájem bez starostí</p>
                 </div>
-                <div class="flex items-center space-x-8">
-                    <a href="../index.html#jak-to-funguje" class="text-xs text-white/30 hover:text-white/60 transition-colors">Jak to funguje</a>
-                    <a href="../index.html#kalkulacka" class="text-xs text-white/30 hover:text-white/60 transition-colors">Kalkulačka</a>
-                    <a href="../index.html#faq" class="text-xs text-white/30 hover:text-white/60 transition-colors">FAQ</a>
-                    <a href="../index.html#kontakt" class="text-xs text-white/30 hover:text-white/60 transition-colors">Kontakt</a>
-                </div>
+                <nav>
+                    <a href="../index.html#jak-to-funguje">Jak to funguje</a>
+                    <a href="../index.html#varianty">Varianty</a>
+                    <a href="../index.html#kalkulator">Kalkulačka</a>
+                    <a href="../index.html#faq">FAQ</a>
+                    <a href="../index.html#formular">Kontakt</a>
+                </nav>
             </div>
-            <div class="text-center mt-8 pt-8 border-t border-white/10">
-                <p class="text-xs text-white/15">&copy; 2025-2026 nemorenta.cz — Všechna práva vyhrazena</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 nemorenta.cz — Všechna práva vyhrazena</p>
             </div>
         </div>
     </footer>
@@ -263,23 +293,21 @@
                     related.forEach(function(rp) {
                         var card = document.createElement('a');
                         card.href = './detail.html?id=' + rp.id;
-                        card.className = 'group bg-white rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300';
+                        card.className = 'related-card';
                         card.innerHTML =
-                            '<div class="relative h-40 overflow-hidden">' +
-                                '<img src="' + rp.image + '" alt="' + (rp.imageAlt || '') + '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">' +
-                            '</div>' +
-                            '<div class="p-4">' +
-                                '<p class="text-xs text-nm-text-light mb-1">' + rp.dateFormatted + '</p>' +
-                                '<h3 class="text-sm font-bold text-nm-dark leading-snug group-hover:text-nm-blue transition-colors">' + rp.title + '</h3>' +
+                            '<img src="' + rp.image + '" alt="' + (rp.imageAlt || '') + '" class="related-card-image">' +
+                            '<div class="related-card-content">' +
+                                '<p class="related-card-meta">' + rp.dateFormatted + '</p>' +
+                                '<h3 class="related-card-title">' + rp.title + '</h3>' +
                             '</div>';
                         relatedGrid.appendChild(card);
                     });
-                    document.getElementById('related-section').classList.remove('hidden');
+                    document.getElementById('related-section').style.display = 'block';
                 }
 
                 // Show article
-                document.getElementById('loading-state').classList.add('hidden');
-                document.getElementById('article-state').classList.remove('hidden');
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('article-state').style.display = 'block';
 
             } catch (err) {
                 console.error('Chyba při načítání článku:', err);
@@ -288,9 +316,8 @@
         }
 
         function showError(msg) {
-            document.getElementById('loading-state').classList.add('hidden');
+            document.getElementById('loading-state').style.display = 'none';
             document.getElementById('error-message').textContent = msg;
-            document.getElementById('error-state').classList.remove('hidden');
             document.getElementById('error-state').style.display = 'flex';
         }
 
