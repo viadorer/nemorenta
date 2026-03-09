@@ -17,19 +17,22 @@ V Vercel Dashboard → Settings → Environment Variables přidej:
 
 ```
 Name:  REALVISOR_API_KEY
-Value: [API klíč od Realvisoru]
+Value: rv_live_29d61ff1c3813b53e0ddf62a2d4134aa5d81839c79503be6
 Scope: Production, Preview, Development
 ```
 
+## Realvisor Form Details
+- **Form Code**: kontaktni-formu-90354
+- **API Endpoint**: https://api-production-88cf.up.railway.app/api/v1/public/api-leads/submit
+
 ## Integrace formuláře
 
-Až dostaneš kód formuláře od Realvisoru, proveď následující:
+✅ **Formulář je již integrován!**
 
-### 1. Najdi formulář v `index.html`
-Hledej sekci s `id="formular"` nebo kontaktní formulář
+Formulář v `index.html` (sekce `id="formular"`) je připojen k Realvisor API přes `/api/submit-lead`.
 
-### 2. Uprav JavaScript pro odeslání
-Formulář by měl volat `/api/submit-lead` místo přímého Realvisor API:
+### Implementace v `script.js`
+Formulář volá `/api/submit-lead` s následujícím payloadem:
 
 ```javascript
 // Konfigurace

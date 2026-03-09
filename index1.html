@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nemorenta.cz – Pronájem bez starostí | Garantovaný nájem a správa nemovitostí</title>
+  <meta name="description" content="Předejte nám svůj byt do správy. Garantujeme pravidelný nájem každý měsíc, staráme se o nájemníky i údržbu. Jednoduché a bezpečné.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="nemorenta.cz – Pronájem bez starostí">
+  <meta property="og:description" content="Předejte nám svůj byt do správy. Garantujeme pravidelný nájem každý měsíc.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nemorenta.cz">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="canonical" href="https://nemorenta.cz">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232D5A87'/><text x='16' y='23' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='sans-serif'>n</text></svg>">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "nemorenta.cz",
+    "description": "Profesionální správa pronájmu a garantovaný nájem pro majitele nemovitostí.",
+    "url": "https://nemorenta.cz",
+    "telephone": "+420603834921",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Praha",
+      "addressCountry": "CZ"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Vzorný nájemce",
+      "url": "https://vzornynajemce.cz"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kolik budu dostávat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Garantovaný nájem je 85–90 % tržního nájmu. Příklad: tržní nájem 18 000 Kč → garance 15 300–16 200 Kč/měsíc. Dostáváte méně na papíře, ale KAŽDÝ měsíc bez výjimky."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Na jak dlouho je smlouva?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standardně 3 roky, minimum 2 roky. Výpovědní lhůta 3 měsíce. Po skončení můžete prodloužit, převzít nájemníka, nebo nemovitost převzít zpět."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co když nájemník neplatí?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To je náš problém, ne váš. Vy dostáváte garantovaný nájem bez ohledu na platby nájemníka. Máme screening, kauce 2 měsíce, pojištění a právní oddělení."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kdo platí opravy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Drobné opravy do 2 000 Kč jsou v ceně. Větší opravy hradí majitel, ale my vše koordinujeme – vybereme řemeslníka, dohlédneme na kvalitu. Havárie řešíme do 4 hodin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jaké nemovitosti přijímáte?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Byty a domy v dobrém stavu v Praze a krajských městech. Funkční rozvody, bez závažných vad, platný PENB. Před podpisem provedeme bezplatnou prohlídku a ocenění."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak prověřujete nájemníky?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "5stupňový screening: ověření identity, kontrola příjmu (min. 3× nájem), registry dlužníků (SOLUS, CRIBIS, exekuce), reference od předchozího pronajímatele, osobní pohovor. Odmítáme cca 30 % žadatelů."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mohu nemovitost prodat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ano. Nový majitel může převzít smlouvu (výhoda – okamžitý příjem), nebo ji ukončíme s 3měsíční výpovědní lhůtou."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <span class="logo-text">nemo<strong>renta</strong>.cz</span>
+      </a>
+      <nav class="header__nav header__nav--desktop">
+        <a href="#jak-to-funguje">Jak to funguje</a>
+        <a href="#varianty">Varianty</a>
+        <a href="#kalkulacka">Kalkulačka</a>
+        <a href="#pribehy">Příběhy</a>
+        <a href="#faq">FAQ</a>
+        <a href="./blog/index.html">Blog</a>
+      </nav>
+      <a href="#formular" class="btn btn--primary header__cta">Chci nabídku</a>
+      <button class="header__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay (outside header to avoid stacking context issues) -->
+  <div class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav__inner">
+      <a href="#jak-to-funguje">Jak to funguje</a>
+      <a href="#varianty">Varianty</a>
+      <a href="#kalkulacka">Kalkulačka</a>
+      <a href="#pribehy">Příběhy</a>
+      <a href="#faq">FAQ</a>
+      <a href="./blog/index.html">Blog</a>
+      <a href="#formular" class="btn btn--primary btn--lg btn--full mobile-nav__cta">Chci nabídku</a>
+    </nav>
+  </div>
+
+  <!-- ========== 1. HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__overtitle">Profesionální správa pronájmu v Praze, Plzni a Berouně</p>
+        <h1 class="hero__title">Předejte nám byt.<br>My se postaráme.<br>Vy dostáváte peníze.</h1>
+        <p class="hero__subtitle">Předáte nám klíče od bytu. My najdeme spolehlivého nájemníka, postaráme se o&nbsp;smlouvy, opravy i&nbsp;komunikaci. Vy každý měsíc dostáváte peníze na&nbsp;účet — i&nbsp;když je byt prázdný nebo nájemník neplatí.</p>
+
+        <div class="hero__features">
+          <div class="hero__feature">
+            <div class="hero__feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <strong>Garantovaný nájem</strong>
+              <span>Platíme i při výpadku nájemníka</span>
+            </div>
+          </div>
+          <div class="hero__feature">
+            <div class="hero__feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <strong>Kompletní správa</strong>
+              <span>Od smlouvy po opravy — vy neděláte nic</span>
+            </div>
+          </div>
+          <div class="hero__feature">
+            <div class="hero__feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <strong>Byt v bezpečí</strong>
+              <span>Pravidelné kontroly, pojištění, vrácení v původním stavu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__ctas">
+          <a href="#formular" class="btn btn--primary btn--lg">Chci pronajímat bez starostí</a>
+          <a href="#kalkulacka" class="btn btn--outline btn--lg">Kolik bych dostával?</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__illustration">
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- House -->
+            <path d="M200 80L100 160V320H300V160L200 80Z" fill="#EBF5FF" stroke="#2D5A87" stroke-width="3"/>
+            <rect x="170" y="220" width="60" height="100" rx="4" fill="#2D5A87"/>
+            <circle cx="220" cy="275" r="5" fill="#53D5FD"/>
+            <rect x="120" y="180" width="40" height="40" rx="4" fill="#53D5FD" opacity="0.3" stroke="#2D5A87" stroke-width="2"/>
+            <rect x="240" y="180" width="40" height="40" rx="4" fill="#53D5FD" opacity="0.3" stroke="#2D5A87" stroke-width="2"/>
+            <path d="M90 160L200 70L310 160" stroke="#2D5A87" stroke-width="4" stroke-linecap="round"/>
+            <!-- Person relaxing -->
+            <circle cx="330" cy="290" r="20" fill="#FDE8D0"/>
+            <path d="M310 340C310 320 320 310 330 310C340 310 350 320 350 340" stroke="#2D5A87" stroke-width="3" fill="none"/>
+            <!-- Coin/money symbols -->
+            <circle cx="80" cy="100" r="15" fill="#53D5FD" opacity="0.6"/>
+            <text x="80" y="105" text-anchor="middle" fill="#2D5A87" font-size="14" font-weight="bold">Kč</text>
+            <circle cx="340" cy="120" r="12" fill="#53D5FD" opacity="0.4"/>
+            <text x="340" y="125" text-anchor="middle" fill="#2D5A87" font-size="11" font-weight="bold">Kč</text>
+            <circle cx="60" cy="200" r="10" fill="#53D5FD" opacity="0.3"/>
+            <text x="60" y="204" text-anchor="middle" fill="#2D5A87" font-size="9" font-weight="bold">Kč</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. SOCIAL PROOF – ČÍSLA ========== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__number">25+</span>
+          <span class="stats__label">let na trhu</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">2 750+</span>
+          <span class="stats__label">pronajatých nemovitostí</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">98 %</span>
+          <span class="stats__label">klientů prodlužuje smlouvu</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number">0 Kč</span>
+          <span class="stats__label">dlužného nájemného pro majitele</span>
+        </div>
+      </div>
+      <p class="stats__note">Součást skupiny <a href="https://vzornynajemce.cz" target="_blank" rel="noopener">Vzorný nájemce</a></p>
+    </div>
+  </section>
+
+  <!-- ========== 3. BOLESTI MAJITELE ========== -->
+  <section class="problems" id="problemy">
+    <div class="container">
+      <h2 class="section-title reveal">Pronajímáte sami? Tohle vás to stojí.</h2>
+      <p class="section-subtitle reveal">Většina majitelů si neuvědomuje, kolik je samostatný pronájem skutečně stojí — nejen peněz, ale i času a nervů.</p>
+
+      <div class="problems__grid">
+        <div class="problems__card reveal reveal-delay-1">
+          <div class="problems__icon problems__icon--red">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Neplatící nájemník</h3>
+          <p>8–12 % nájemníků přestane platit. Vystěhování soudní cestou trvá 6–12 měsíců. Průměrná ztráta: <strong>30–80 tis. Kč</strong>.</p>
+        </div>
+        <div class="problems__card reveal reveal-delay-2">
+          <div class="problems__icon problems__icon--orange">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+          </div>
+          <h3>Prázdný byt</h3>
+          <p>Průměrná vakance je 1,5 měsíce ročně. Každý měsíc bez nájemníka = ztráta <strong>celého nájmu</strong>.</p>
+        </div>
+        <div class="problems__card reveal reveal-delay-3">
+          <div class="problems__icon problems__icon--blue">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Váš čas a nervy</h3>
+          <p>5–15 hodin měsíčně: hledání nájemníků, opravy, vyúčtování, právní problémy. <strong>Volání o půlnoci</strong> při havárii.</p>
+        </div>
+      </div>
+
+      <div class="problems__cta">
+        <a href="#kalkulacka" class="btn btn--outline">Spočítejte si, kolik vás to skutečně stojí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. KALKULAČKA NÁKLADŮ ========== -->
+  <section class="calculator" id="kalkulacka">
+    <div class="container">
+      <h2 class="section-title reveal">Kolik vás pronájem na vlastní pěst stojí?</h2>
+      <p class="section-subtitle reveal">Zadejte dvě čísla a uvidíte skutečné srovnání za rok.</p>
+
+      <div class="calculator__box reveal">
+        <div class="calculator__inputs">
+          <div class="calculator__field">
+            <label for="calc-rent">Měsíční nájem vašeho bytu</label>
+            <div class="calculator__input-wrap">
+              <input type="number" id="calc-rent" value="18000" min="5000" max="100000" step="500">
+              <span class="calculator__unit">Kč</span>
+            </div>
+          </div>
+          <div class="calculator__field">
+            <label for="calc-hourly">Kolik si ceníte hodinu svého času</label>
+            <div class="calculator__input-wrap">
+              <input type="number" id="calc-hourly" value="500" min="100" max="5000" step="50">
+              <span class="calculator__unit">Kč/hod</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calculator__results" id="calc-results">
+          <div class="calculator__comparison">
+            <div class="calculator__col calculator__col--own">
+              <h3>Vlastní správa</h3>
+              <ul id="calc-own-list">
+                <li>Roční nájem: <strong id="calc-own-gross">216 000 Kč</strong></li>
+                <li class="calc-minus">Vakance (1,5 měs.): <strong id="calc-own-vacancy">−27 000 Kč</strong></li>
+                <li class="calc-minus">Riziko neplatiče (10 %): <strong id="calc-own-risk">−21 600 Kč</strong></li>
+                <li class="calc-minus">Váš čas (10 h/měs.): <strong id="calc-own-time">−60 000 Kč</strong></li>
+              </ul>
+              <div class="calculator__total">
+                <span>Čistý příjem:</span>
+                <strong id="calc-own-total">107 400 Kč</strong>
+              </div>
+            </div>
+            <div class="calculator__col calculator__col--pro">
+              <h3>S nemorenta.cz</h3>
+              <ul>
+                <li>Garantovaný nájem (87,5 %): <strong id="calc-pro-rent">189 000 Kč</strong></li>
+                <li class="calc-zero">Vakance: <strong>0 Kč</strong></li>
+                <li class="calc-zero">Riziko neplatiče: <strong>0 Kč</strong></li>
+                <li class="calc-zero">Váš čas: <strong>0 hodin</strong></li>
+              </ul>
+              <div class="calculator__total calculator__total--highlight">
+                <span>Čistý příjem:</span>
+                <strong id="calc-pro-total">189 000 Kč</strong>
+              </div>
+            </div>
+          </div>
+          <div class="calculator__savings" id="calc-savings">
+            <span class="calculator__savings-label">Vaše roční úspora:</span>
+            <span class="calculator__savings-amount" id="calc-savings-amount">81 600 Kč</span>
+            <span class="calculator__savings-months" id="calc-savings-months">To jsou 4,5 měsíčních nájmů!</span>
+          </div>
+        </div>
+
+        <div class="calculator__action">
+          <a href="#formular" class="btn btn--primary btn--lg">Chci ušetřit tyto peníze</a>
+        </div>
+
+        <p class="calculator__disclaimer">Orientační kalkulace. Skutečné hodnoty se mohou lišit podle konkrétní nemovitosti a situace na trhu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. JAK TO FUNGUJE – 4 KROKY ========== -->
+  <section class="steps" id="jak-to-funguje">
+    <div class="container">
+      <h2 class="section-title reveal">Jak to funguje</h2>
+      <p class="section-subtitle reveal">Od prvního telefonátu po pravidelný příjem — 4 jednoduché kroky.</p>
+
+      <div class="steps__grid">
+        <div class="steps__item reveal reveal-delay-1">
+          <div class="steps__number">1</div>
+          <h3>Zavoláme si</h3>
+          <p>Ozvěte se nám. Domluvíme nezávaznou schůzku u&nbsp;vás v&nbsp;bytě. Prohlédneme nemovitost, zhodnotíme potenciál a&nbsp;navrhneme výši garantovaného nájmu. <strong>Do 48 hodin máte nabídku.</strong></p>
+        </div>
+        <div class="steps__item reveal reveal-delay-2">
+          <div class="steps__number">2</div>
+          <h3>Dohodneme podmínky</h3>
+          <p>Vyberete si variantu, která vám sedí. Podepíšeme smlouvu na 2–5 let. Jasné, srozumitelné podmínky <strong>bez skrytých poplatků</strong>. Osobně nebo online.</p>
+        </div>
+        <div class="steps__item reveal reveal-delay-3">
+          <div class="steps__number">3</div>
+          <h3>Předáte klíče</h3>
+          <p>Převezmeme byt s kompletním předávacím protokolem a fotodokumentací. Najdeme a&nbsp;důkladně prověříme nájemníka — <strong>odmítáme 30 % žadatelů</strong>.</p>
+        </div>
+        <div class="steps__item reveal reveal-delay-4">
+          <div class="steps__number">4</div>
+          <h3>Dostáváte peníze</h3>
+          <p>Nejpozději od 2. měsíce vám chodí nájemné na účet. <strong>Každý měsíc. Bez výjimky.</strong> My se staráme o&nbsp;správu, kontroly, opravy i&nbsp;vyúčtování. Vy žijete svůj život.</p>
+        </div>
+      </div>
+
+      <div class="steps__cta">
+        <a href="#formular" class="btn btn--primary btn--lg">Chci pronajímat takhle</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. DVĚ VARIANTY ========== -->
+  <section class="variants" id="varianty">
+    <div class="container">
+      <h2 class="section-title reveal">Vyberte si variantu, která vám vyhovuje</h2>
+      <p class="section-subtitle reveal">Obě varianty zahrnují kompletní správu pronájmu. Rozdíl je v&nbsp;tom, jak se dělíte o&nbsp;výnos.</p>
+
+      <div class="variants__grid">
+        <div class="variants__card reveal reveal-delay-1">
+          <div class="variants__badge">Správa</div>
+          <h3>Chci mít klid a&nbsp;vydělat maximum</h3>
+          <p class="variants__desc">Nájemní smlouvu uzavíráte s&nbsp;námi. My se staráme o&nbsp;vše a&nbsp;vy dostáváte podíl z&nbsp;nájmu. Čím víc byt vydělá, tím víc dostanete.</p>
+          <ul class="variants__list">
+            <li>Garance platby nájmu i při výpadku nájemníka</li>
+            <li>Prověření nájemníků v 6 rejstřících</li>
+            <li>Pravidelné kontroly a údržba bytu</li>
+            <li>Řešení oprav, havárií a komunikace s nájemníkem</li>
+            <li>Právní servis a nájemní smlouva v ceně</li>
+          </ul>
+          <p class="variants__price">Cena: na míru podle vašeho bytu</p>
+          <a href="#formular" class="btn btn--outline btn--full">Chci vědět víc o Správě</a>
+        </div>
+
+        <div class="variants__card variants__card--featured reveal reveal-delay-2">
+          <div class="variants__badge variants__badge--featured">Garance</div>
+          <h3>Chci fixní částku každý měsíc</h3>
+          <p class="variants__desc">Domluvíme se na fixní částce (85–90 % tržního nájmu), kterou dostáváte každý měsíc. Bez ohledu na obsazenost, platby nebo opravy.</p>
+          <ul class="variants__list">
+            <li>Fixní nájem každý měsíc — bez výjimky</li>
+            <li>Žádné výpadky při změnách nájemníků</li>
+            <li>Veškeré opravy a údržbu hradíme my</li>
+            <li>Kompletní správa — vy neděláte vůbec nic</li>
+            <li>Byt vracíme v původním stavu</li>
+          </ul>
+          <p class="variants__price">Fixní částka na míru vašemu bytu</p>
+          <a href="#formular" class="btn btn--primary btn--full">Chci znát svůj garantovaný nájem</a>
+        </div>
+      </div>
+
+      <p class="variants__footnote">Na schůzce vám ukážeme konkrétní čísla pro váš byt. Obě varianty můžeme kombinovat, pokud vlastníte více nemovitostí.</p>
+    </div>
+  </section>
+
+  <!-- ========== 7. CO VŠE JE V CENĚ ========== -->
+  <section class="services" id="sluzby">
+    <div class="container">
+      <h2 class="section-title reveal">Co vše je v ceně</h2>
+      <p class="section-subtitle reveal">Žádné skryté poplatky. Vše zahrnuto v jedné ceně.</p>
+
+      <div class="services__grid reveal">
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Hledání a prověřování nájemníků</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Příprava nájemní smlouvy a právní servis</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Předávací protokoly s fotodokumentací</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Pravidelné kontroly stavu (1&times; za 3 měsíce)</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>Běžná údržba a drobné opravy (do 2 000 Kč)</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Komunikace s nájemníky 24/7</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>Řešení havárií do 4 hodin</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Řešení pojistných událostí</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Vyúčtování energií</span>
+        </div>
+        <div class="services__item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D5A87" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Online přehled pro majitele (dashboard)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. PŘÍBĚHY KLIENTŮ ========== -->
+  <section class="stories" id="pribehy">
+    <div class="container">
+      <h2 class="section-title reveal">Příběhy našich klientů</h2>
+      <p class="section-subtitle reveal">Skuteční majitelé, skutečné výsledky.</p>
+
+      <div class="stories__grid">
+        <div class="stories__card reveal">
+          <div class="stories__header">
+            <div class="stories__avatar">JN</div>
+            <div>
+              <strong>Investor se 3 byty v Praze</strong>
+              <span>Pan Novák, 45 let</span>
+            </div>
+          </div>
+          <div class="stories__before">
+            <span class="stories__label">Před:</span>
+            5 let pronajímal sám. 15 hodin/měsíc správa, 2&times; neplatič (ztráta 120 tis. Kč), vakance 2 měsíce/rok.
+          </div>
+          <div class="stories__after">
+            <span class="stories__label">Po předání:</span>
+            Garance <strong>42 000 Kč/měsíc</strong> (vs. průměr 38 000 při vlastní správě), <strong>0 hodin práce</strong>.
+          </div>
+        </div>
+
+        <div class="stories__card reveal">
+          <div class="stories__header">
+            <div class="stories__avatar">MS</div>
+            <div>
+              <strong>Dědička bytu v jiném městě</strong>
+              <span>Paní Svobodová, 52 let</span>
+            </div>
+          </div>
+          <div class="stories__before">
+            <span class="stories__label">Před:</span>
+            Zdědila byt 2+1 v Brně, žije v Praze. Problémový nájemník, 3 měsíce dluh, poškozená koupelna.
+          </div>
+          <div class="stories__after">
+            <span class="stories__label">Po předání:</span>
+            Garance <strong>13 500 Kč/měsíc</strong>, byt opravený, <strong>0 problémů za 2 roky</strong>.
+          </div>
+        </div>
+
+        <div class="stories__card reveal">
+          <div class="stories__header">
+            <div class="stories__avatar">FD</div>
+            <div>
+              <strong>Senior s volným bytem</strong>
+              <span>Pan Dvořák, 72 let</span>
+            </div>
+          </div>
+          <div class="stories__before">
+            <span class="stories__label">Před:</span>
+            Přestěhoval se k dceři, byt 3+1 v Ostravě prázdný. Nechtěl se zabývat hledáním nájemníků.
+          </div>
+          <div class="stories__after">
+            <span class="stories__label">Po předání:</span>
+            Garance <strong>11 000 Kč/měsíc</strong>. „Konečně mám klid. Nemusím nikomu volat, nic řešit."
+          </div>
+        </div>
+
+        <div class="stories__card reveal">
+          <div class="stories__header">
+            <div class="stories__avatar">TK</div>
+            <div>
+              <strong>Expat v Londýně</strong>
+              <span>Tomáš, 38 let</span>
+            </div>
+          </div>
+          <div class="stories__before">
+            <span class="stories__label">Před:</span>
+            Pracuje v Londýně, byt 2+kk na Praze 5. Správa na dálku byla noční můra.
+          </div>
+          <div class="stories__after">
+            <span class="stories__label">Po předání:</span>
+            Online dashboard, garance <strong>16 800 Kč/měsíc</strong>. „Podívám se jednou za měsíc. Vše funguje."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9. SROVNÁNÍ ========== -->
+  <section class="comparison" id="srovnani">
+    <div class="container">
+      <h2 class="section-title reveal">Proč nemorenta.cz</h2>
+      <p class="section-subtitle reveal">Srovnejte si možnosti — a rozhodněte se na základě faktů.</p>
+
+      <div class="comparison__table-wrap reveal">
+        <table class="comparison__table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Vlastní správa</th>
+              <th>Realitní kancelář</th>
+              <th>Správcovská firma</th>
+              <th class="comparison__highlight">nemorenta.cz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hledání nájemníka</strong></td>
+              <td>Vy sami</td>
+              <td>Jednorázově za provizi</td>
+              <td>Za poplatek</td>
+              <td class="comparison__highlight">Zahrnuto</td>
+            </tr>
+            <tr>
+              <td><strong>Správa a komunikace</strong></td>
+              <td>Vy sami</td>
+              <td>Vy sami</td>
+              <td>Za 8–15 % nájmu</td>
+              <td class="comparison__highlight">Zahrnuto</td>
+            </tr>
+            <tr>
+              <td><strong>Garance nájmu</strong></td>
+              <td class="comparison__no">Ne</td>
+              <td class="comparison__no">Ne</td>
+              <td class="comparison__no">Ne</td>
+              <td class="comparison__highlight comparison__yes">Ano</td>
+            </tr>
+            <tr>
+              <td><strong>Riziko neplatiče</strong></td>
+              <td>Vy</td>
+              <td>Vy</td>
+              <td>Vy</td>
+              <td class="comparison__highlight"><strong>My</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Vakance</strong></td>
+              <td>Vaše ztráta</td>
+              <td>Vaše ztráta</td>
+              <td>Vaše ztráta</td>
+              <td class="comparison__highlight"><strong>0 Kč</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Čas/měsíc</strong></td>
+              <td>5–15 hodin</td>
+              <td>3–10 hodin</td>
+              <td>1–3 hodiny</td>
+              <td class="comparison__highlight"><strong>0 hodin</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="comparison__key-message">Jsme jediní, kdo nese riziko neplacení za vás.</p>
+    </div>
+  </section>
+
+  <!-- ========== 10. FAQ ========== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Časté otázky</h2>
+
+      <div class="faq__list reveal">
+        <details class="faq__item" open>
+          <summary class="faq__question">Kolik budu dostávat?</summary>
+          <div class="faq__answer">
+            <p>Garantovaný nájem je 85–90 % tržního nájmu. Příklad: tržní nájem 18 000 Kč &rarr; garance 15 300–16 200 Kč/měsíc. Dostáváte méně na&nbsp;papíře, ale <strong>každý měsíc bez výjimky</strong>. Po započtení rizik (vakance, neplatič, váš čas) je reálný příjem často vyšší než při vlastní správě.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Na jak dlouho je smlouva?</summary>
+          <div class="faq__answer">
+            <p>Standardně 3 roky, minimum 2 roky. Výpovědní lhůta 3 měsíce. Po skončení můžete prodloužit, převzít nájemníka, nebo nemovitost převzít zpět.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Co když nájemník neplatí?</summary>
+          <div class="faq__answer">
+            <p>To je náš problém, ne váš. Vy dostáváte garantovaný nájem bez ohledu na platby nájemníka. Máme screening, kauce 2 měsíce, pojištění a právní oddělení.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Kdo platí opravy?</summary>
+          <div class="faq__answer">
+            <p>Drobné opravy do 2 000 Kč jsou v ceně. Větší opravy hradí majitel, ale my vše koordinujeme — vybereme řemeslníka, dohlédneme na kvalitu. Havárie řešíme okamžitě (do 4 hodin). Vše s fotodokumentací.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Jaké nemovitosti přijímáte?</summary>
+          <div class="faq__answer">
+            <p>Byty a domy v dobrém stavu v Praze a krajských městech. Funkční rozvody, bez závažných vad, platný PENB. Před podpisem provedeme bezplatnou prohlídku a ocenění.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Jak prověřujete nájemníky?</summary>
+          <div class="faq__answer">
+            <p>5stupňový screening: ověření identity, kontrola příjmu (min. 3&times; nájem), registry dlužníků (SOLUS, CRIBIS, exekuce), reference od předchozího pronajímatele, osobní pohovor. <strong>Odmítáme cca 30 % žadatelů.</strong></p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Mohu nemovitost prodat?</summary>
+          <div class="faq__answer">
+            <p>Ano. Nový majitel může převzít smlouvu (výhoda — okamžitý příjem), nebo ji ukončíme s 3měsíční výpovědní lhůtou. Garantovaný nájem může zvýšit prodejní cenu nemovitosti.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 11. ZÁVĚREČNÉ CTA – FORMULÁŘ ========== -->
+  <section class="contact" id="formular">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__text reveal">
+          <h2 class="section-title section-title--left">Zjistěte, kolik vám garantujeme</h2>
+          <p>Vyplňte formulář a&nbsp;do 48 hodin vám pošleme nezávaznou nabídku s&nbsp;konkrétní částkou pro váš byt.</p>
+          <ul class="contact__benefits">
+            <li>Nezávazně a zdarma</li>
+            <li>Žádný spam</li>
+            <li>Odpovíme do 48 hodin</li>
+          </ul>
+          <div class="contact__phone">
+            <p>Raději zavoláte? <br><a href="tel:+420603834921"><strong>+420 603 834 921</strong></a><br><span>Po–Pá 8:00–17:00</span></p>
+          </div>
+        </div>
+
+        <form class="contact__form reveal reveal-delay-1" id="contact-form" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="form-name">Jméno a příjmení *</label>
+              <input type="text" id="form-name" name="name" required autocomplete="name">
+            </div>
+          </div>
+          <div class="form__row form__row--2">
+            <div class="form__field">
+              <label for="form-phone">Telefon *</label>
+              <input type="tel" id="form-phone" name="phone" required autocomplete="tel">
+            </div>
+            <div class="form__field">
+              <label for="form-email">E-mail *</label>
+              <input type="email" id="form-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form__row form__row--2">
+            <div class="form__field">
+              <label for="form-city">Město</label>
+              <select id="form-city" name="city">
+                <option value="">Vyberte město</option>
+                <option value="Praha">Praha</option>
+                <option value="Plzeň">Plzeň</option>
+                <option value="Beroun">Beroun</option>
+                <option value="Brno">Brno</option>
+                <option value="Ostrava">Ostrava</option>
+                <option value="Jiné">Jiné</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="form-type">Typ nemovitosti</label>
+              <select id="form-type" name="type">
+                <option value="">Vyberte typ</option>
+                <option value="byt">Byt</option>
+                <option value="dum">Dům</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="form-layout">Dispozice</label>
+              <select id="form-layout" name="layout">
+                <option value="">Vyberte dispozici</option>
+                <option value="1+kk">1+kk</option>
+                <option value="1+1">1+1</option>
+                <option value="2+kk">2+kk</option>
+                <option value="2+1">2+1</option>
+                <option value="3+kk">3+kk</option>
+                <option value="3+1">3+1</option>
+                <option value="4+kk">4+kk a větší</option>
+                <option value="jiné">Jiné</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="form-note">Poznámka (volitelně)</label>
+              <textarea id="form-note" name="note" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form__row">
+            <button type="submit" class="btn btn--primary btn--lg btn--full">Chci nezávaznou nabídku</button>
+          </div>
+          <p class="form__privacy">Odesláním souhlasíte se <a href="/ochrana-osobnich-udaju" target="_blank">zpracováním osobních údajů</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 12. PATIČKA ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="logo-text logo-text--light">nemo<strong>renta</strong>.cz</span>
+          <p>Součást skupiny <a href="https://vzornynajemce.cz" target="_blank" rel="noopener">Vzorný nájemce</a></p>
+        </div>
+        <div class="footer__contact">
+          <p><strong>Kontakt</strong></p>
+          <p><a href="tel:+420603834921">+420 603 834 921</a></p>
+          <p><a href="mailto:info@nemorenta.cz">info@nemorenta.cz</a></p>
+          <p>Po–Pá 8:00–17:00</p>
+        </div>
+        <div class="footer__links">
+          <p><strong>Informace</strong></p>
+          <a href="/ochrana-osobnich-udaju">Ochrana osobních údajů</a>
+          <a href="/obchodni-podminky">Obchodní podmínky</a>
+          <a href="https://vzornynajemce.cz" target="_blank" rel="noopener">vzornynajemce.cz</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 nemorenta.cz — Všechna práva vyhrazena.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-banner__inner">
+      <p>Tento web používá cookies pro zlepšení vašeho zážitku a měření návštěvnosti.</p>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--sm btn--outline" id="cookie-reject">Odmítnout</button>
+        <button class="btn btn--sm btn--primary" id="cookie-accept">Přijmout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+
+  <!-- Meta Pixel -->
+  <!-- <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script> -->
+
+</body>
+</html>

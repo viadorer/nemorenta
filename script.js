@@ -180,30 +180,51 @@
       formData.note ? 'Poznámka: ' + formData.note : ''
     ].filter(Boolean).join('\n');
 
-    // Submit to RealVisor CRM via webhook
-    var webhookUrl = 'https://app.realvisor.cz/api/webhooks/lead';
+    // Submit to Realvisor API via Vercel serverless function
     var payload = {
       firstName: firstName,
       lastName: lastName,
       email: formData.email,
       phone: formData.phone,
-      source: 'nemorenta.cz',
-      campaign: 'web-formular',
-      message: message
+      message: message,
+      data: {
+        city: formData.city,
+        propertyType: formData.type,
+        layout: formData.layout,
+        source: 'nemorenta.cz',
+        formCode: 'kontaktni-formu-90354',
+        pageUrl: window.location.href,
+        referrer: document.referrer,
+        timestamp: new Date().toISOString()
+      }
     };
 
-    fetch(webhookUrl, {
+    fetch('/api/submit-lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
-    .then(function () {
+    .then(function (response) {
+      if (!response.ok) {
+        return response.json().then(function (error) {
+          throw new Error(error.message || 'Chyba při odesílání');
+        });
+      }
+      return response.json();
+    })
+    .then(function (result) {
+      console.log('Form submitted successfully:', result);
       showSuccess();
     })
-    .catch(function () {
-      // Even if webhook fails, show success (data logged, we'll handle offline)
-      console.log('Lead data (webhook unavailable):', payload);
-      showSuccess();
+    .catch(function (error) {
+      console.error('Form submission error:', error);
+      submitBtn.classList.remove('is-loading');
+      submitBtn.textContent = 'Chyba při odesílání. Zkuste znovu.';
+      submitBtn.style.background = '#ef4444';
+      setTimeout(function () {
+        submitBtn.textContent = 'Chci nezávaznou nabídku';
+        submitBtn.style.background = '';
+      }, 3000);
     });
 
     function showSuccess() {
